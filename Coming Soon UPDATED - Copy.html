@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jfcurry perosnal blog | Data, Sports, Code and the Occasional Outlier</title>
+<script src="C:\Users\jc707_000\Github Pages Project Files\jc707270.github.io\jquery-3.4.0.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, inital-scale=1">
+<style>
+
+/* */
+body {
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #1b1b1b;
+	font-size: 14px;
+	line-height: 24px;
+	background: #f5f5f5;
+}
+
+/* */
+.container {
+	width: 960px;
+	margin: auto;
+}
+
+/* */
+section {
+	width: 600px;
+	float: right;
+	overflow: hidden;
+	display: block;
+}
+
+/* */
+aside {
+	margin-top: 100px;
+	background-color: #ffffff;
+	height: 500px;
+	float: left;
+	width: 250px;
+	padding-top: 50px;
+}
+
+/* */
+ul li {
+	padding-top: 20px;
+	padding-left: 0px;
+	color: black;
+	font-weight: bold;
+	list-style: none;
+	text-align: left;
+}
+
+/* */
+/*a {
+	text-decoration: none;
+	color: #ffffff;
+}*/
+
+/* */
+section div {
+	width: 90%;
+	margin-left: 0;
+	margin-top: 30px;
+}
+
+/* */
+section div h1 {
+	font-size: 24px;
+	padding: 20px 0px;
+	font-weight: bold;
+}
+
+/* */
+p {
+	padding-bottom: 10px;
+}
+
+/* */
+h2 {
+	font-weight: bold;
+	font-size: 32px;
+	text-align: left;
+}
+
+
+/* */
+.fixed {
+	position: fixed;
+	margin-top: 0px;
+}
+
+/* */
+.hide {
+	display: none;
+}
+
+.categories {
+	margin-left: 0px;
+	text-align: left;
+	padding-left: 0px; /* VERY VERY IMPORTANT TO GET CATEGORY 1, 2, ETC> ALIGNED TO LEFT */
+}
+
+
+</style>
+</head>
+<body>
+	<div class="container">
+		
+		<aside class="sticky">
+			<img src="James_Cropped_Head.jpg" width="150" height="150">
+			<h1 class="list-heading">Categories</h1>
+			<ul class="categories">
+				<li>Category 1</li>
+				<li>Category 2</li>
+				<li>Category 3</li>
+				<li>Category 4</li>
+				<li class="hide top"><a href="#">Back To Top</a></li>
+			</ul>
+		</aside>
+
+		<section>
+			<h2>My Title 1</h2>
+			<h5>Title description, Dec 7, 2017</h5>
+			<div class="placeholderimg" style="height: 350px;"><img src="B3_Pressure_Modeling.png" width="600" height="350"></div>
+			<p>My 1st official blog post</p>
+			<p>This paragraph will begin my introdcution into the topic for my first official blog post. Hopefully this 
+			will be informative and fun. Of course this is all just my opnion and what I'd like to say about the subject.
+			I would encourage others to express their opinions on the subject too, as they are sure to many different opinions.</p>
+			<br>
+			<hr>
+			<h2>My Title 2</h2>
+			<h5>Title description, Dec 7, 2019</h5>
+			<div class="placeholderimg" style="height: 200px;"><img src="Strat_of_NW_Shelf_Permian_Basin.jpg" width="300" height="200"></div>
+			<p>My 1st official blog post</p>
+			<p>This paragraph will begin my introdcution into the topic for my first official blog post. Hopefully this 
+			will be informative and fun. Of course this is all just my opnion and what I'd like to say about the subject.
+			I would encourage others to express their opinions on the subject too, as they are sure to m
+			<h2>My Title 3/h2>
+			<h5>Title description, Dec 7, 2017</h5>
+			<div class="placeholderimg" style="height: 200px;"><img src="ellenburger_point_smoothed_plot.jpg" width="300" height="200"></div>
+			<p>My 1st official blog post</p>
+			<p>This paragraph will begin my introdcution into the topic for my first official blog post. Hopefully this 
+			will be informative and fun. Of course this is all just my opnion and what I'd like to say about the subject.
+			I would encourage others to express their opinions on the subject too, as they are sure to many different opinions.</p>
+			<br>
+			<hr>
+			<h2>My Title 4</h2>
+			<h5>Title description, Dec 7, 2019</h5>
+			<div class="placeholderimg" style="height: 200px;">Place holder Image</div>
+			<p>My 1st official blog post</p>
+			<p>This paragraph will begin my introdcution into the topic for my first official blog post. Hopefully this 
+			will be informative and fun. Of course this is all just my opnion and what I'd like to say about the subject.
+			I would encourage others to express their opinions on the subject too, as they are sure to m
+		</section>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+		var offset = $('.sticky').offset();
+		$(window).scroll(function(e) {
+			if(window.scrollY >= offset.top) {
+				$('.sticky').addClass('fixed');
+				$('.top').removeClass('hide');		
+			} else {
+				$('.sticky').removeClass('fixed');
+				$('.top').addClass('hide');
+			}
+		});
+
+		$('.top a').click(function(){
+			$(document.body).animate({scrollTop : 0}, 800);
+			return false;
+		});
+	});
+</script>
+</html>
+

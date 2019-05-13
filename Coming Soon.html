@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hidden in plain sight</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, inital-scale=1">
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+	padding: 80px;
+	text-align: center;
+	background: #0000A0;
+	color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+	font-size: 80px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+	overflow: hidden; /* Hide overflow */
+	background-color: #333; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+	float: left; /* Make sure that the links stay side-by-side */
+	display: block; /* Change the display to block, for responsive reasons (see below) */
+	color: white; /* White text color */
+	text-align: center; /* Center the text */
+	padding: 14px 20px; /* Add some padding */
+	text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+	float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+	background-color: #ddd; /* Grey background color */
+	color: black; /* Black text color */
+}
+
+/* Ensure proper sizing */
+* {
+	box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+	height: 100%; /* Full-height: remove this if you want "auto" height */
+	width: 160px; /* Set the width of the sidebar */
+	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */ 
+	left: 0;
+	background-color: #f1f1f1; /* Grey background color */
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 20px; /* Some padding */
+}
+
+/* Main column */
+.main {
+	margin-left: 160px; /* Same as the width of the sidebar */
+	background-color: white; /* White background color */
+	padding: 0px 10px; /* Some padding */  
+}
+
+/* */
+.mypicimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+
+/* */
+.mypicimg2 {
+	background-color: bisque;
+	width: 100%;
+	padding: 20px;
+}
+
+/* */
+.placeholderimg {
+	background-color: darkcyan;
+	width: 100%;
+	padding: 20px
+}
+
+.sidelinks {
+	overflow: hidden;
+	max-height: 0;
+}
+
+/* */
+.sidelinks a:hover {
+	color: navy;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Coming Soon</h1>
+		<p>A website created by James Curry</p>
+	</div>
+	
+	<div class="navbar">
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+		<a href="#" class="right">Link 4</a>
+	</div>
+	
+	<div class="row">
+		<div class="side">
+			<h2>About Me</h2>
+			<h5>Photo of me:</h5>
+			<div class="mypicimg" style="height: 200px">Professional Picture Background</div>
+			<p>Hi, my name is James Curry and this is my website where I will discuss...</p>
+			<h3>TEST Categories</h3>
+			<ul id="sidelinks">
+				<li><a href="">Category 1</a></li>
+				<li><a href="">Category 2</a></li>
+			</ul>
+			<h3>Categories</h3>
+			<p>The sections below have links to information I've gathered while learning,
+				in addition to finished/unfinished projects.</p>
+			<div class="mypicimg" style="height: 60px;">Background Pic</div><br>
+			<div class="mypicimg" style="height: 60px;">Background Pic</div><br>
+			<div class="mypicimg" style="height: 60px;">Background Pic</div>
+			<h3>Most recent posts</h3>
+			<div class="mypicimg2" style="height: 60px;">Background Pic2</div><br>
+			<div class="mypicimg2" style="height: 60px;">Background Pic2</div><br>
+			<div class="mypicimg2" style="height: 60px;">Background Pic2</div><br>
+			<div class="mypicimg2" style="height: 60px;">Background Pic2</div><br>
+			<div class="mypicimg2" style="height: 60px;">Background Pic2</div>
+		</div>
+
+		<div class="main">
+			<h2>MY TITILE 1</h2>
+			<h5>Title description, Dec 7, 2017</h5>
+			<div class="placeholderimg" style="height: 200px;">Place holder Image</div>
+			<p>My 1st official blog post</p>
+			<p>This paragraph will begin my introdcution into the topic for my first official blog post. Hopefully this 
+			will be informative and fun. Of course this is all just my opnion and what I'd like to say about the subject.
+			I would encourage others to express their opinions on the subject too, as they are sure to many different opinions.</p>
+			<br>
+			<hr>
+			<h2>MY TITILE 2</h2>
+			<h5>Title description, Dec 7, 2019</h5>
+			<div class="placeholderimg" style="height: 200px;">Place holder Image</div>
+			<p>My 1st official blog post</p>
+			<p>This paragraph will begin my introdcution into the topic for my first official blog post. Hopefully this 
+			will be informative and fun. Of course this is all just my opnion and what I'd like to say about the subject.
+			I would encourage others to express their opinions on the subject too, as they are sure to many different opinions.</p>
+		</div>
+	</div>
+</body>
+</html>
+
